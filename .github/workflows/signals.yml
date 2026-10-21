@@ -1,0 +1,65 @@
+name: Signal agenti
+
+on:
+  schedule:
+    # UTC vaqtida, ish kunlari. Yoz/qish vaqti uchun ikkala variant ham bor —
+    # agent o'zi qaysi biri to'g'riligini aniqlaydi, keraksizini darhol tugatadi.
+    # London: 06:20 / 07:20 UTC,  New York: 11:20 / 12:20 UTC
+    - cron: "20 6,7,11,12 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: "Qo'lda sinov: kuzatuv davomiyligi (daqiqa)"
+        default: "20"
+
+concurrency:
+  group: signal-agent
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      # state.json (takror yubormaslik uchun) ishga tushirishlar orasida saqlanadi
+      - uses: actions/cache/restore@v4
+        with:
+          path: state.json
+          key: state-${{ github.run_id }}
+          restore-keys: state-
+
+      - name: Agent
+        env:
+          ALTFINS_API_KEY: ${{ secrets.ALTFINS_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python agent.py --once --minutes "${{ github.event.inputs.minutes }}" --debug
+          else
+            python agent.py --ci
+          fi
+
+      - uses: actions/cache/save@v4
+        if: always() && hashFiles('state.json') != ''
+        with:
+          path: state.json
+          key: state-${{ github.run_id }}
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: log-${{ github.run_id }}
+          path: |
+            agent.log
+            altfins_raw.json
+          if-no-files-found: ignore
+          retention-days: 7
