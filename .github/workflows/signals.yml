@@ -4,8 +4,9 @@ on:
   schedule:
     # UTC vaqtida, ish kunlari. Yoz/qish vaqti uchun ikkala variant ham bor —
     # agent o'zi qaysi biri to'g'riligini aniqlaydi, keraksizini darhol tugatadi.
-    # London: 06:20 / 07:20 UTC,  New York: 11:20 / 12:20 UTC
-    - cron: "20 6,7,11,12 * * 1-5"
+    # GitHub ba'zan jadvalni o'tkazib yuboradi, shuning uchun har 20 daqiqada zaxira bor;
+    # sessiya bir marta ishlangan bo'lsa, keyingilari darhol chiqib ketadi.
+    - cron: "10,30,50 6,7,11,12 * * 1-5"
   workflow_dispatch:
     inputs:
       minutes:

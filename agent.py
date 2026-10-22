@@ -780,6 +780,14 @@ def run_ci(dry_run=False):
     for run_dt, label in upcoming_runs(now, mb, cfg("SKIP_WEEKENDS", True, bool), include_recent_min=45):
         delta = (run_dt - now).total_seconds() / 60
         if -45 <= delta <= 35:
+            st = load_state()
+            key = run_dt.strftime("%Y-%m-%d ") + label.split(" (")[0]
+            if key in st.get("sessions", {}):
+                log.info("Bu sessiya allaqachon ishlangan: %s — chiqildi", key)
+                return
+            st.setdefault("sessions", {})[key] = time.time()
+            st["sessions"] = {k: v for k, v in st["sessions"].items() if v > time.time() - 7 * 86400}
+            save_state(st)
             sleep_until(run_dt)
             remaining = watch_min - max(0, (datetime.now(timezone.utc) - run_dt).total_seconds() / 60)
             run_session(label, int(remaining), dry_run=dry_run)
