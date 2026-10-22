@@ -149,7 +149,7 @@ SIGNAL_FAMILIES = [
                   "CHANNEL", "NEW_LOCAL_HIGH", "ATH", "TRADING_RANGE", "BIG_MOVEMENT", "GAINERS",
                   "UNUSUAL_VOLUME", "RVOL", "TR_ATR", "BOLLBAND", "EMERGING"]),
     ("MA_CROSS", ["EMA", "SMA", "MA_RIBBON"]),
-    ("TREND", ["TREND", "MOMENTUM", "OBV"]),
+    ("TREND", ["TREND", "MOMENTUM", "OBV", "POWER"]),
 ]
 FAMILY_NAMES = {
     "MACD": "MACD kesishuvi", "OSC": "Osillyator qaytishi", "CANDLE": "Sham figurasi",
