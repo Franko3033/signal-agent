@@ -3,3 +3,4 @@ state.json
 agent.log
 altfins_raw.json
 __pycache__/
+chat_id.txt

@@ -100,6 +100,7 @@ def fetch_signals(lookback_min, debug=False):
         if not chunk or data.get("last", True):
             break
     if debug:
+        log.info("altFINS namunasi: %s", json.dumps(items[:2], ensure_ascii=False)[:1500])
         with open(os.path.join(HERE, "altfins_raw.json"), "w", encoding="utf-8") as f:
             json.dump(raw_pages, f, ensure_ascii=False, indent=2)
         log.info("altFINS xom javobi altfins_raw.json ga saqlandi")
@@ -414,10 +415,41 @@ def format_signal(s, signal_names):
 
 
 # ----------------------------------------------------------------- Telegram
+def tg_discover_chat(token):
+    """Chat ID berilmagan bo'lsa: botga /start yozgan shaxsiy chatni topadi va eslab qoladi."""
+    cache = os.path.join(HERE, "chat_id.txt")
+    try:
+        with open(cache, encoding="utf-8") as f:
+            cid = f.read().strip()
+            if cid:
+                return cid
+    except OSError:
+        pass
+    try:
+        r = requests.get(f"https://api.telegram.org/bot{token}/getUpdates", timeout=20).json()
+    except requests.RequestException as e:
+        log.error("Telegram getUpdates xatosi: %s", e)
+        return None
+    for u in reversed(r.get("result", [])):
+        ch = (u.get("message") or u.get("my_chat_member") or {}).get("chat") or {}
+        if ch.get("type") == "private":
+            cid = str(ch["id"])
+            with open(cache, "w", encoding="utf-8") as f:
+                f.write(cid)
+            log.info("Telegram chat topildi: %s", ch.get("first_name") or ch.get("username"))
+            return cid
+    log.error("Chat topilmadi: Telegram'da botingizni ochib, Start tugmasini bosing")
+    return None
+
+
 def tg_send(text):
     token, chat = cfg("TELEGRAM_BOT_TOKEN"), cfg("TELEGRAM_CHAT_ID")
-    if not token or not chat:
-        sys.exit("config.env faylida TELEGRAM_BOT_TOKEN yoki TELEGRAM_CHAT_ID yo'q")
+    if not token:
+        sys.exit("TELEGRAM_BOT_TOKEN yo'q")
+    if not chat:
+        chat = tg_discover_chat(token)
+        if not chat:
+            return False
     r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
                       json={"chat_id": chat, "text": text, "parse_mode": "HTML",
                             "disable_web_page_preview": True}, timeout=20)
@@ -767,7 +799,8 @@ def main():
     if a.get_chat_id:
         tg_get_chat_id()
     elif a.test_telegram:
-        print("Yuborildi ✅" if tg_send("✅ Signal agenti ulandi!") else "Yuborilmadi ❌")
+        ok = tg_send("✅ Signal agenti ulandi! Sinov kuzatuvi boshlandi.")
+        print("Yuborildi ✅" if ok else "Yuborilmadi ❌")
     elif a.credits:
         print(*altfins_credits())
     elif a.schedule:

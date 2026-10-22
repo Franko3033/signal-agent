@@ -32,7 +32,9 @@ jobs:
       # state.json (takror yubormaslik uchun) ishga tushirishlar orasida saqlanadi
       - uses: actions/cache/restore@v4
         with:
-          path: state.json
+          path: |
+            state.json
+            chat_id.txt
           key: state-${{ github.run_id }}
           restore-keys: state-
 
@@ -43,15 +45,19 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python agent.py --test-telegram
+            python agent.py --credits
             python agent.py --once --minutes "${{ github.event.inputs.minutes }}" --debug
           else
             python agent.py --ci
           fi
 
       - uses: actions/cache/save@v4
-        if: always() && hashFiles('state.json') != ''
+        if: always() && hashFiles('state.json', 'chat_id.txt') != ''
         with:
-          path: state.json
+          path: |
+            state.json
+            chat_id.txt
           key: state-${{ github.run_id }}
 
       - uses: actions/upload-artifact@v4
