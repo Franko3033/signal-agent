@@ -4,7 +4,10 @@
 
 Har ish kuni ikki marta — London va New York sessiyalari ochilishidan 30 daqiqa oldin:
 
-1. **altFINS Signals Feed**'dan so'nggi 2 soatdagi **15M BULLISH** signallar olinadi.
+1. **altFINS Signals Feed**'dan so'nggi 2 soatdagi **BULLISH** signallar olinadi — faqat **kuchli turlar**:
+   breakout, chart figuralari (uchburchak, bayroq, wedge, kanal, double/triple bottom, inverse H&S, harmonik),
+   EMA/SMA kesishuvlari, support/resistance. Bull/Bear Power, Williams, Stochastic, RSI, MACD,
+   top gainers kabi zaif/shovqinli signallar tashlanadi (`STRONG_ONLY=true`).
 2. MEXC spot'da bor coinlar **kuzatuvga** olinadi.
 3. Agent **2 soat davomida** har 5 daqiqada MEXC'dagi **5M shamlarni** tekshiradi.
    Har bir signal **o'z turining qoidasi** bo'yicha tasdiqlanadi (pastdagi jadval).

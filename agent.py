@@ -166,6 +166,31 @@ def signal_family(key):
     return "BREAKOUT"
 
 
+# Kuchli signal turlari (oq ro'yxat) va zaif/shovqinli turlar (qora ro'yxat).
+# Qora ro'yxat birinchi tekshiriladi.
+WEAK_SIGNALS = ["POWER", "WILLIAMS", "STOCH", "RSI", "CCI", "ULTIMATE", "OVERSOLD", "OVERBOUGHT",
+                "MACD", "TOP_GAINERS", "TOP_LOSERS", "BIG_MOVEMENT", "UNUSUAL_VOLUME", "RVOL",
+                "TR_ATR", "FUNDAMENTALS", "ATH", "CONSECUTIVE", "BOLLBAND", "OBV", "MOMENTUM"]
+STRONG_SIGNALS = [
+    # breakout va resistance/support
+    "BREAKOUT", "HORIZONTAL_RESISTANCE", "HORIZONTAL_SUPPORT", "SUPPORT_RESISTANCE",
+    "NEW_LOCAL_HIGH", "TRADING_RANGE", "PULLBACK",
+    # chart figuralari
+    "TRIANGLE", "FLAG", "PENNANT", "WEDGE", "RECTANGLE", "CHANNEL_UP", "DOUBLE_BOTTOM",
+    "TRIPLE_BOTTOM", "INVERSE_HEAD", "EMERGING_PATTERNS", "ABCD", "GARTLEY", "BUTTERFLY",
+    "DRIVE", "POINT_RETRACEMENT", "POINT_EXTENSION",
+    # o'rtacha chiziqlar kesishuvi
+    "EMA_", "SMA_", "MA_RIBBON",
+]
+
+
+def is_strong_signal(key):
+    k = str(key).upper()
+    if any(w in k for w in WEAK_SIGNALS):
+        return False
+    return any(w in k for w in STRONG_SIGNALS)
+
+
 def group_signals(items, only_15m=True):
     """Signallarni coin bo'yicha guruhlaydi:
     {SYMBOL: [{"key", "name", "family", "level"}, ...]}"""
@@ -188,6 +213,8 @@ def group_signals(items, only_15m=True):
         if sym.endswith("USDT"):
             sym = sym[:-4]
         key = str(_field(it, "signalKey", "signal", "key") or _field(it, "signalName", "name") or "SIGNAL")
+        if cfg("STRONG_ONLY", True, bool) and not is_strong_signal(key):
+            continue
         name = _field(it, "signalName", "name") or key
         name = str(name).replace("SIGNALS_SUMMARY_", "").replace("_", " ").title()
         out.setdefault(sym, [])
