@@ -122,6 +122,18 @@ def signal_interval(item):
     return None
 
 
+def parse_number(v):
+    """'13,185,653' yoki 1.3e7 -> float; bo'lmasa None."""
+    if v is None:
+        return None
+    if isinstance(v, (int, float)):
+        return float(v)
+    try:
+        return float(str(v).replace(",", "").replace(" ", "").replace("$", ""))
+    except ValueError:
+        return None
+
+
 def signal_level(item):
     """Signalda ko'rsatilgan narx darajasi (breakout/support/resistance), bo'lsa."""
     for k, v in item.items():
@@ -215,6 +227,11 @@ def group_signals(items, only_15m=True):
         key = str(_field(it, "signalKey", "signal", "key") or _field(it, "signalName", "name") or "SIGNAL")
         if cfg("STRONG_ONLY", True, bool) and not is_strong_signal(key):
             continue
+        min_cap = cfg("MIN_MARKET_CAP", 100_000_000, float)
+        if min_cap > 0:
+            cap = parse_number(_field(it, "marketCap", "market_cap", "MARKET_CAP"))
+            if cap is None or cap < min_cap:
+                continue
         name = _field(it, "signalName", "name") or key
         name = str(name).replace("SIGNALS_SUMMARY_", "").replace("_", " ").title()
         out.setdefault(sym, [])
@@ -635,6 +652,11 @@ def add_candidates(watch, done, st, lookback, min_rr, min_score, debug):
         c15 = klines(pair, "15m", 300)
         if c15 is None:
             done[sym] = "MEXC spot'da yo'q"
+            continue
+        min_vol = cfg("MIN_MEXC_VOLUME", 2_000_000, float)
+        vol24 = sum(x["c"] * x["v"] for x in c15[-96:])  # so'nggi 24 soat (96 × 15M), USDT
+        if vol24 < min_vol:
+            done[sym] = f"MEXC 24s hajmi kam (${vol24:,.0f})"
             continue
         c1h = klines(pair, "1h", 250)
         pre, why = analyze(sym, c15, c1h, min_rr=min_rr)
