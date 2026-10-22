@@ -426,7 +426,17 @@ def tg_discover_chat(token):
     except OSError:
         pass
     try:
+        me = requests.get(f"https://api.telegram.org/bot{token}/getMe", timeout=20).json()
+        if not me.get("ok"):
+            log.error("Telegram token noto'g'ri: %s", me.get("description"))
+            return None
+        log.info("Bot: @%s", me["result"].get("username"))
+        wh = requests.get(f"https://api.telegram.org/bot{token}/getWebhookInfo", timeout=20).json()
+        if wh.get("result", {}).get("url"):
+            log.info("Botda webhook bor edi — o'chirilmoqda")
+            requests.get(f"https://api.telegram.org/bot{token}/deleteWebhook", timeout=20)
         r = requests.get(f"https://api.telegram.org/bot{token}/getUpdates", timeout=20).json()
+        log.info("Botga kelgan xabarlar soni: %d", len(r.get("result", [])))
     except requests.RequestException as e:
         log.error("Telegram getUpdates xatosi: %s", e)
         return None
