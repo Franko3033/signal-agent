@@ -1,0 +1,39 @@
+name: Backtest
+
+on:
+  # "backtest-now.txt" o'zgarsa ishga tushadi (ichida: kunlar soni va coinlar soni)
+  push:
+    paths:
+      - backtest-now.txt
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backtest
+  cancel-in-progress: true
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Backtest
+        run: |
+          DAYS=$(sed -n 1p backtest-now.txt | tr -dc 0-9); COINS=$(sed -n 2p backtest-now.txt | tr -dc 0-9)
+          python backtest.py --days "${DAYS:-90}" --coins "${COINS:-150}" | tee results_log.txt
+      - name: Natijalarni saqlash
+        if: always()
+        run: |
+          mkdir -p results
+          tail -n 400 results_log.txt > results/log_tail.txt 2>/dev/null || true
+          git config user.name "signal-agent-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results
+          git commit -q -m "Backtest natijalari" && (git pull -q --rebase && git push -q) || true
