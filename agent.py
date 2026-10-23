@@ -203,6 +203,12 @@ def is_strong_signal(key):
     return any(w in k for w in STRONG_SIGNALS)
 
 
+from collections import Counter
+FUNNEL = Counter()          # bosqichma-bosqich hisob (diagnostika)
+WEAK_SEEN = Counter()       # tashlangan zaif signal turlari
+STRONG_SEEN = Counter()     # o'tgan kuchli signal turlari
+
+
 def group_signals(items, only_15m=True):
     """Signallarni coin bo'yicha guruhlaydi:
     {SYMBOL: [{"key", "name", "family", "level"}, ...]}"""
@@ -210,8 +216,10 @@ def group_signals(items, only_15m=True):
     for it in items:
         if not isinstance(it, dict):
             continue
+        FUNNEL["1. altFINS signallari"] += 1
         direction = str(_field(it, "direction", "signalDirection") or "BULLISH").upper()
         if "BEAR" in direction:
+            FUNNEL["x bearish"] += 1
             continue
         iv = signal_interval(it)
         if only_15m and iv is not None and "15" not in iv:
@@ -226,12 +234,17 @@ def group_signals(items, only_15m=True):
             sym = sym[:-4]
         key = str(_field(it, "signalKey", "signal", "key") or _field(it, "signalName", "name") or "SIGNAL")
         if cfg("STRONG_ONLY", True, bool) and not is_strong_signal(key):
+            FUNNEL["x zaif signal turi"] += 1
+            WEAK_SEEN[key.replace("SIGNALS_SUMMARY_", "")] += 1
             continue
+        STRONG_SEEN[key.replace("SIGNALS_SUMMARY_", "")] += 1
         min_cap = cfg("MIN_MARKET_CAP", 50_000_000, float)
         if min_cap > 0:
             cap = parse_number(_field(it, "marketCap", "market_cap", "MARKET_CAP"))
             if cap is None or cap < min_cap:
+                FUNNEL["x kapitalizatsiya kichik"] += 1
                 continue
+        FUNNEL["2. kuchli + yirik signallar"] += 1
         name = _field(it, "signalName", "name") or key
         name = str(name).replace("SIGNALS_SUMMARY_", "").replace("_", " ").title()
         out.setdefault(sym, [])
@@ -694,7 +707,9 @@ def run_session(label, minutes, dry_run=False, debug=False):
     watch, done, confirmed = {}, {}, []
 
     log.info("Sessiya boshlandi: %s (%s daqiqa)", label, minutes)
+    FUNNEL.clear(); WEAK_SEEN.clear(); STRONG_SEEN.clear()
     added = add_candidates(watch, done, st, lookback, min_rr, max(0, min_score - 1), debug)
+    watched_all = set(added)
     last_refresh = datetime.now(timezone.utc)
 
     if cfg("SEND_WATCHLIST", False, bool):
@@ -719,6 +734,7 @@ def run_session(label, minutes, dry_run=False, debug=False):
         if (datetime.now(timezone.utc) - last_refresh).total_seconds() >= refresh_min * 60:
             try:
                 new = add_candidates(watch, done, st, refresh_min + 15, min_rr, max(0, min_score - 1), False)
+                watched_all.update(new)
                 if new and cfg("SEND_WATCHLIST", False, bool):
                     send("👀 Kuzatuvga qo'shildi: " + ", ".join(esc(s) for s in new), dry_run)
             except Exception as e:
@@ -774,12 +790,55 @@ def run_session(label, minutes, dry_run=False, debug=False):
 
     for sym in watch:
         done[sym] = "2 soat ichida tasdiq bo'lmadi"
+    try:
+        write_diag(label, done, confirmed, len(watched_all))
+    except Exception as e:
+        log.warning("Diagnostika yozilmadi: %s", e)
     if not confirmed and cfg("SEND_EMPTY_REPORT", True, bool):
-        send(f"🏁 {esc(label.split(' (')[0])}: 2 soat ichida 5M tasdiqli BUY setup bo'lmadi. "
-             f"Bu sessiyada signal yo'q.", dry_run)
+        send(f"🏁 {esc(label.split(' (')[0])}: 5M tasdiqli BUY setup bo'lmadi.\n"
+             f"<i>{esc(funnel_short(done, len(watched_all)))}</i>", dry_run)
     for sym, why in done.items():
         log.info("  %s: %s", sym, why)
     log.info("Sessiya tugadi: %d ta tasdiqlandi", len(confirmed))
+
+
+# ----------------------------------------------------------------- diagnostika
+def reason_bucket(why):
+    w = why.lower()
+    for k, label in [("mexc spot", "MEXC spot'da yo'q"), ("hajmi kam", "MEXC hajmi kam"),
+                     ("resistance", "resistance juda yaqin"), ("rsi", "RSI juda baland"),
+                     ("baho", "baho past"), ("ma'lumot", "ma'lumot yetarli emas"),
+                     ("sl ostiga", "narx SL ostiga tushdi"), ("tasdiq bo'lmadi", "2 soatda 5M tasdiq yo'q"),
+                     ("kuchliroq", "boshqa coin tanlandi"), ("5m", "5M ma'lumot yo'q")]:
+        if k in w:
+            return ("tasdiq bor, lekin " + label) if w.startswith("tasdiq bor") and k != "kuchliroq" else label
+    return why
+
+
+def write_diag(label, done, confirmed, watched_total):
+    lines = [f"# Oxirgi sessiya: {label}", f"Vaqt: {datetime.now(TZ_LOCAL):%d.%m.%Y %H:%M} (Toshkent)", "",
+             "## Voronka"]
+    for k in sorted(FUNNEL):
+        lines.append(f"- {k}: {FUNNEL[k]}")
+    lines.append(f"- 3. kuzatuvga olingan coinlar: {watched_total}")
+    lines.append(f"- 4. yuborilgan signal: {len(confirmed)} {' '.join(confirmed)}")
+    lines += ["", "## Coin bo'yicha sabablar"]
+    for k, n in Counter(reason_bucket(v) for v in done.values()).most_common():
+        lines.append(f"- {k}: {n}")
+    lines += ["", "## Coinlar"] + [f"- {s}: {w}" for s, w in sorted(done.items())]
+    lines += ["", "## Eng ko'p kelgan kuchli turlar"] + [f"- {k}: {n}" for k, n in STRONG_SEEN.most_common(10)]
+    lines += ["", "## Eng ko'p tashlangan zaif turlar"] + [f"- {k}: {n}" for k, n in WEAK_SEEN.most_common(10)]
+    os.makedirs(os.path.join(HERE, "diagnostics"), exist_ok=True)
+    with open(os.path.join(HERE, "diagnostics", "last_run.md"), "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
+
+def funnel_short(done, watched_total):
+    b = Counter(reason_bucket(v) for v in done.values())
+    top = ", ".join(f"{k} — {n}" for k, n in b.most_common(3))
+    return (f"altFINS: {FUNNEL['1. altFINS signallari']} signal → kuchli va yirik: "
+            f"{FUNNEL['2. kuchli + yirik signallar']} → kuzatuvda: {watched_total} coin"
+            + (f"\nAsosiy sabablar: {top}" if top else ""))
 
 
 # ----------------------------------------------------------------- jadval

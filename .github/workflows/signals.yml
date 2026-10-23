@@ -7,11 +7,18 @@ on:
     # GitHub ba'zan jadvalni o'tkazib yuboradi, shuning uchun har 20 daqiqada zaxira bor;
     # sessiya bir marta ishlangan bo'lsa, keyingilari darhol chiqib ketadi.
     - cron: "10,30,50 6,7,11,12 * * 1-5"
+  # "run-now.txt" o'zgarsa — darhol qo'lda sessiya (daqiqa soni fayl ichida)
+  push:
+    paths:
+      - run-now.txt
   workflow_dispatch:
     inputs:
       minutes:
         description: "Qo'lda sinov: kuzatuv davomiyligi (daqiqa)"
         default: "20"
+
+permissions:
+  contents: write
 
 concurrency:
   group: signal-agent
@@ -49,8 +56,23 @@ jobs:
             python agent.py --test-telegram
             python agent.py --credits
             python agent.py --once --minutes "${{ github.event.inputs.minutes }}" --debug
+          elif [ "${{ github.event_name }}" = "push" ]; then
+            python agent.py --credits
+            python agent.py --once --minutes "$(head -c 4 run-now.txt | tr -dc 0-9)" --debug
           else
             python agent.py --ci
+          fi
+
+      # Diagnostika hisobotini repozitoriyga yozish (bu GitHub'ning 60 kunlik
+      # faolsizlik qoidasidan ham himoya qiladi)
+      - name: Diagnostikani saqlash
+        if: always()
+        run: |
+          if [ -f diagnostics/last_run.md ]; then
+            git config user.name "signal-agent-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add diagnostics/last_run.md
+            git commit -q -m "Diagnostika: oxirgi sessiya" && (git pull -q --rebase && git push -q) || true
           fi
 
       - uses: actions/cache/save@v4
