@@ -227,7 +227,7 @@ def group_signals(items, only_15m=True):
         key = str(_field(it, "signalKey", "signal", "key") or _field(it, "signalName", "name") or "SIGNAL")
         if cfg("STRONG_ONLY", True, bool) and not is_strong_signal(key):
             continue
-        min_cap = cfg("MIN_MARKET_CAP", 100_000_000, float)
+        min_cap = cfg("MIN_MARKET_CAP", 50_000_000, float)
         if min_cap > 0:
             cap = parse_number(_field(it, "marketCap", "market_cap", "MARKET_CAP"))
             if cap is None or cap < min_cap:
