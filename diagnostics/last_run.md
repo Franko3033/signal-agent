@@ -1,0 +1,127 @@
+# Oxirgi sessiya: Qo'lda ishga tushirildi
+Vaqt: 24.10.2026 02:35 (Toshkent)
+
+## Voronka
+- 1. altFINS signallari: 2569
+- 2. kuchli + yirik signallar: 256
+- x kapitalizatsiya kichik: 517
+- x zaif signal turi: 1796
+- 3. kuzatuvga olingan coinlar: 1
+- 4. yuborilgan signal: 0 
+
+## Coin bo'yicha sabablar
+- MEXC hajmi kam: 65
+- MEXC spot'da yo'q: 13
+- resistance juda yaqin: 3
+- baho past: 2
+- 2 soatda 5M tasdiq yo'q: 1
+
+## Coinlar
+- 2Z: MEXC 24s hajmi kam ($59,517)
+- A: MEXC 24s hajmi kam ($61,223)
+- AAPLX: MEXC 24s hajmi kam ($78,354)
+- ACH: MEXC 24s hajmi kam ($58,886)
+- AERO: baho 0/5
+- AIOZ: MEXC spot'da yo'q
+- AKE: MEXC 24s hajmi kam ($781,103)
+- ALT: MEXC spot'da yo'q
+- APT: MEXC 24s hajmi kam ($290,153)
+- ASTER: MEXC 24s hajmi kam ($808,589)
+- AXL: MEXC spot'da yo'q
+- B: MEXC 24s hajmi kam ($75,661)
+- BANANAS31: MEXC 24s hajmi kam ($62,206)
+- BEAMM: MEXC spot'da yo'q
+- BIO: MEXC 24s hajmi kam ($74,396)
+- BNB: resistance juda yaqin (744.3100, RR 1:0.6)
+- CKB: MEXC 24s hajmi kam ($60,286)
+- CTM: MEXC 24s hajmi kam ($1,437,382)
+- CVXX: MEXC spot'da yo'q
+- DASH: MEXC 24s hajmi kam ($968,846)
+- DCR: MEXC 24s hajmi kam ($58,508)
+- DEXE: MEXC 24s hajmi kam ($70,859)
+- DGB: MEXC spot'da yo'q
+- DOG: MEXC 24s hajmi kam ($72,895)
+- EIGEN: MEXC 24s hajmi kam ($108,824)
+- ELF: MEXC 24s hajmi kam ($55,877)
+- ENA: resistance juda yaqin (0.21055, RR 1:0.6)
+- ETC: MEXC 24s hajmi kam ($100,756)
+- ETHFI: resistance juda yaqin (0.65790, RR 1:0.9)
+- FARTCOIN: MEXC 24s hajmi kam ($310,082)
+- FLUID: MEXC 24s hajmi kam ($4,571)
+- GLM: MEXC spot'da yo'q
+- GMX: MEXC 24s hajmi kam ($63,442)
+- GNO: MEXC 24s hajmi kam ($58,113)
+- GRT: MEXC 24s hajmi kam ($60,222)
+- HNT: MEXC 24s hajmi kam ($64,734)
+- HOT: MEXC 24s hajmi kam ($56,528)
+- HTX: MEXC 24s hajmi kam ($53,490)
+- HUMA: MEXC 24s hajmi kam ($105,696)
+- IMX: MEXC 24s hajmi kam ($59,614)
+- IOTA: MEXC 24s hajmi kam ($71,349)
+- JITOSOL: MEXC spot'da yo'q
+- JST: MEXC 24s hajmi kam ($75,415)
+- KAG: MEXC 24s hajmi kam ($131,251)
+- LPT: MEXC 24s hajmi kam ($63,365)
+- MEGA: MEXC 24s hajmi kam ($73,483)
+- MET: MEXC 24s hajmi kam ($137,578)
+- MX: MEXC 24s hajmi kam ($1,488,165)
+- NATG: MEXC 24s hajmi kam ($190,564)
+- O: MEXC 24s hajmi kam ($56,095)
+- OCEAN: MEXC spot'da yo'q
+- ONT: MEXC 24s hajmi kam ($69,695)
+- PEAQ: MEXC 24s hajmi kam ($72,757)
+- Q: MEXC 24s hajmi kam ($450,345)
+- QQQX: MEXC spot'da yo'q
+- QUBIC: MEXC 24s hajmi kam ($172,018)
+- RLC: MEXC 24s hajmi kam ($92,193)
+- ROSE: MEXC 24s hajmi kam ($69,221)
+- SEI: MEXC 24s hajmi kam ($118,836)
+- SFP: MEXC 24s hajmi kam ($68,274)
+- SHIB: MEXC 24s hajmi kam ($1,373,849)
+- SNX: MEXC 24s hajmi kam ($55,045)
+- SOMI: MEXC 24s hajmi kam ($60,381)
+- STRCX: MEXC spot'da yo'q
+- SUN: MEXC 24s hajmi kam ($53,296)
+- SUSHI: MEXC 24s hajmi kam ($75,723)
+- TEL: MEXC 24s hajmi kam ($97,787)
+- TIA: MEXC 24s hajmi kam ($1,135,028)
+- TON: MEXC spot'da yo'q
+- TREAD: MEXC 24s hajmi kam ($3,057)
+- TRX: 2 soat ichida tasdiq bo'lmadi
+- TSLAX: MEXC 24s hajmi kam ($81,935)
+- ULTIMA: MEXC 24s hajmi kam ($267,384)
+- UNI: MEXC 24s hajmi kam ($361,982)
+- UNP: MEXC 24s hajmi kam ($24,036)
+- VIRTUAL: MEXC 24s hajmi kam ($116,982)
+- VSN: MEXC 24s hajmi kam ($55,385)
+- W: MEXC 24s hajmi kam ($822,363)
+- WIF: MEXC 24s hajmi kam ($327,207)
+- WLD: MEXC 24s hajmi kam ($848,044)
+- XAUM: MEXC spot'da yo'q
+- ZETA: MEXC 24s hajmi kam ($61,536)
+- ZIG: MEXC 24s hajmi kam ($132,092)
+- ZRO: baho 0/5
+
+## Eng ko'p kelgan kuchli turlar
+- SUPPORT_RESISTANCE_APPROACHING: 457
+- NEW_LOCAL_HIGH_LOW_5_PERIODS: 79
+- PULLBACK_UP_DOWN_TREND: 49
+- NEW_LOCAL_HIGH_LOW_10_PERIODS: 31
+- PULLBACK_UP_DOWN_TREND_1W: 31
+- NEW_LOCAL_HIGH_LOW_15_PERIODS: 28
+- PRICE_SMA_5_10: 17
+- TRADING_RANGE_V2: 12
+- NEW_LOCAL_HIGH_LOW_50_PERIODS: 11
+- NEW_LOCAL_HIGH_LOW_30_PERIODS: 11
+
+## Eng ko'p tashlangan zaif turlar
+- STOCH_RSI: 359
+- STOCH: 311
+- WILLIAMS: 285
+- RSI_9: 212
+- EARLY_MOMENTUM_MACD_HISTOGRAM_INFLECTION: 109
+- BULL_POWER: 107
+- SUPPORT_RESISTANCE_APPROACHING_OVERSOLD: 82
+- UNUSUAL_VOLUME_GAINERS_DECLINERS: 73
+- RSI_14: 70
+- SHORT_TERM_TREND_UPGRADE_DOWNGRADE: 32
