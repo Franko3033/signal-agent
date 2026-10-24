@@ -666,7 +666,7 @@ def add_candidates(watch, done, st, lookback, min_rr, min_score, debug):
         if c15 is None:
             done[sym] = "MEXC spot'da yo'q"
             continue
-        min_vol = cfg("MIN_MEXC_VOLUME", 2_000_000, float)
+        min_vol = cfg("MIN_MEXC_VOLUME", 500_000, float)
         vol24 = sum(x["c"] * x["v"] for x in c15[-96:])  # so'nggi 24 soat (96 × 15M), USDT
         if vol24 < min_vol:
             done[sym] = f"MEXC 24s hajmi kam (${vol24:,.0f})"

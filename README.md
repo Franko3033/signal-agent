@@ -9,7 +9,7 @@ Har ish kuni ikki marta — London va New York sessiyalari ochilishidan 30 daqiq
    EMA/SMA kesishuvlari, support/resistance. Bull/Bear Power, Williams, Stochastic, RSI, MACD,
    top gainers kabi zaif/shovqinli signallar tashlanadi (`STRONG_ONLY=true`).
 2. **Kichik coinlar tashlanadi:** kapitalizatsiyasi **50 mln $** dan kam yoki MEXC'dagi 24 soatlik hajmi
-   **2 mln $** dan kam coinlar olinmaydi. Qolgan, MEXC spot'da bor coinlar **kuzatuvga** olinadi.
+   **500 ming $** dan kam coinlar olinmaydi. Qolgan, MEXC spot'da bor coinlar **kuzatuvga** olinadi.
 3. Agent **2 soat davomida** har 5 daqiqada MEXC'dagi **5M shamlarni** tekshiradi.
    Har bir signal **o'z turining qoidasi** bo'yicha tasdiqlanadi (pastdagi jadval).
 4. Tasdiq bo'lsa — **Entry, SL, TP1 (1:2), TP2** hisoblanadi va **faqat bitta, eng yaxshi coin**
