@@ -1,136 +1,130 @@
-# Oxirgi sessiya: 🇺🇸 New York sessiyasi (ochilish 18:00)
-Vaqt: 09.11.2026 18:25 (Toshkent)
+# Oxirgi sessiya: 🇬🇧 London sessiyasi (ochilish 13:00)
+Vaqt: 10.11.2026 14:25 (Toshkent)
 
 ## Voronka
-- 1. altFINS signallari: 2698
-- 2. kuchli + yirik signallar: 206
-- x kapitalizatsiya kichik: 492
-- x zaif signal turi: 2000
-- 3. kuzatuvga olingan coinlar: 4
-- 4. yuborilgan signal: 1 TIA
+- 1. altFINS signallari: 4716
+- 2. kuchli + yirik signallar: 246
+- x kapitalizatsiya kichik: 707
+- x zaif signal turi: 3763
+- 3. kuzatuvga olingan coinlar: 1
+- 4. yuborilgan signal: 0 
 
 ## Coin bo'yicha sabablar
-- MEXC hajmi kam: 67
-- MEXC spot'da yo'q: 14
-- resistance juda yaqin: 8
+- MEXC hajmi kam: 64
+- MEXC spot'da yo'q: 16
+- resistance juda yaqin: 5
+- baho past: 1
 - tasdiq bor, lekin resistance juda yaqin: 1
-- tasdiq bor, lekin baho past: 1
-- 2 soatda 5M tasdiq yo'q: 1
 
 ## Coinlar
-- A: MEXC 24s hajmi kam ($59,443)
-- ADA: resistance juda yaqin (0.17830, RR 1:0.3)
+- A: MEXC 24s hajmi kam ($52,520)
+- ADI: MEXC 24s hajmi kam ($264,792)
 - AIOZ: MEXC spot'da yo'q
 - AKT: MEXC spot'da yo'q
-- AMP: MEXC 24s hajmi kam ($56,598)
-- APEPE: MEXC 24s hajmi kam ($137,947)
-- ARB: MEXC 24s hajmi kam ($204,400)
-- ARIA: MEXC 24s hajmi kam ($132,738)
-- ASTER: 2 soat ichida tasdiq bo'lmadi
-- ATOM: MEXC 24s hajmi kam ($470,734)
-- AVAX: MEXC 24s hajmi kam ($344,332)
-- B: MEXC 24s hajmi kam ($123,294)
+- ALE: MEXC 24s hajmi kam ($34,106)
+- AMP: MEXC 24s hajmi kam ($55,137)
+- ARIA: MEXC 24s hajmi kam ($130,835)
+- ATLA: MEXC 24s hajmi kam ($279,839)
+- AVAX: resistance juda yaqin (8.4280, RR 1:0.4)
+- AZNX: MEXC spot'da yo'q
+- BAT: MEXC 24s hajmi kam ($58,922)
 - BEAMM: MEXC spot'da yo'q
-- BNB: tasdiq bor, lekin baho 2/5
-- COW: MEXC 24s hajmi kam ($55,608)
-- CRO: MEXC 24s hajmi kam ($169,446)
-- CVX: MEXC 24s hajmi kam ($58,279)
+- BR: MEXC 24s hajmi kam ($70,047)
+- CAP: MEXC 24s hajmi kam ($70,126)
+- CC: MEXC 24s hajmi kam ($186,839)
+- CHILLHOUSE: MEXC spot'da yo'q
+- COW: MEXC 24s hajmi kam ($57,082)
+- CRO: MEXC 24s hajmi kam ($74,637)
+- CRV: MEXC 24s hajmi kam ($314,199)
+- CTM: MEXC 24s hajmi kam ($404,909)
 - CVXX: MEXC spot'da yo'q
-- DEEP: MEXC 24s hajmi kam ($63,102)
+- DASH: MEXC 24s hajmi kam ($396,872)
 - DIEM: MEXC spot'da yo'q
-- DOG: MEXC 24s hajmi kam ($67,355)
-- DOT: resistance juda yaqin (0.87790, RR 1:0.2)
-- DYDX: MEXC 24s hajmi kam ($91,370)
-- EDGEX: MEXC spot'da yo'q
-- EIGEN: MEXC 24s hajmi kam ($115,695)
-- ENS: MEXC 24s hajmi kam ($57,501)
-- ETC: MEXC 24s hajmi kam ($31,928)
-- FARTCOIN: MEXC 24s hajmi kam ($155,905)
-- FET: MEXC 24s hajmi kam ($310,238)
-- FF: MEXC 24s hajmi kam ($59,257)
-- FIL: resistance juda yaqin (0.77680, RR 1:0.7)
-- FLR: MEXC 24s hajmi kam ($75,316)
-- FTT: MEXC 24s hajmi kam ($57,236)
-- GALA: MEXC 24s hajmi kam ($289,385)
-- GEOD: MEXC 24s hajmi kam ($85,682)
+- DRV: MEXC 24s hajmi kam ($56,892)
+- DYDX: MEXC 24s hajmi kam ($60,786)
+- EIGEN: MEXC 24s hajmi kam ($83,191)
+- ENS: MEXC 24s hajmi kam ($56,865)
+- ETH: tasdiq bor, lekin resistance juda yaqin (2 128.52, RR 1:0.9)
+- ETHFI: resistance juda yaqin (0.63360, RR 1:0.5)
+- EURC: MEXC spot'da yo'q
+- FLR: MEXC 24s hajmi kam ($64,152)
+- FLUID: MEXC 24s hajmi kam ($2,686)
+- FTT: MEXC 24s hajmi kam ($57,317)
+- GALA: MEXC 24s hajmi kam ($246,287)
+- GAS: MEXC spot'da yo'q
 - GLM: MEXC spot'da yo'q
+- GNO: MEXC 24s hajmi kam ($57,756)
+- GOMINING: MEXC 24s hajmi kam ($94,502)
 - GT: MEXC spot'da yo'q
-- H: MEXC 24s hajmi kam ($127,782)
-- HYPE: resistance juda yaqin (74.1700, RR 1:0.5)
+- H: MEXC 24s hajmi kam ($73,539)
+- HOT: MEXC 24s hajmi kam ($106,984)
+- HYPE: MEXC 24s hajmi kam ($461,142)
+- INJ: resistance juda yaqin (8.1470, RR 1:0.6)
 - IP: MEXC spot'da yo'q
-- JASMY: MEXC 24s hajmi kam ($81,065)
-- JCT: resistance juda yaqin (0.00980000, RR 1:0.9)
-- JST: MEXC 24s hajmi kam ($68,197)
-- JUP: MEXC 24s hajmi kam ($114,761)
-- KSM: MEXC 24s hajmi kam ($63,568)
-- KUB: MEXC spot'da yo'q
-- LDO: MEXC 24s hajmi kam ($126,271)
-- LEO: MEXC spot'da yo'q
-- LTC: tasdiq bor, lekin resistance juda yaqin (51.7700, RR 1:0.7)
-- M: MEXC 24s hajmi kam ($64,778)
-- MAGMA: MEXC 24s hajmi kam ($96,861)
-- MELANIA: MEXC 24s hajmi kam ($55,699)
-- MINA: MEXC 24s hajmi kam ($65,256)
-- MON: MEXC 24s hajmi kam ($164,795)
-- MORPHO: MEXC 24s hajmi kam ($65,436)
-- MSFTX: MEXC spot'da yo'q
-- MSTRX: MEXC spot'da yo'q
-- NEO: MEXC 24s hajmi kam ($56,892)
-- NIGHT: MEXC 24s hajmi kam ($158,474)
-- NMR: MEXC 24s hajmi kam ($66,379)
-- O: MEXC 24s hajmi kam ($61,082)
-- OP: MEXC 24s hajmi kam ($65,914)
-- ORCA: MEXC 24s hajmi kam ($64,218)
-- PENDLE: MEXC 24s hajmi kam ($363,233)
-- PI: MEXC 24s hajmi kam ($208,910)
-- PLUME: MEXC 24s hajmi kam ($74,964)
-- PYTH: MEXC 24s hajmi kam ($432,345)
-- QRL: MEXC 24s hajmi kam ($30,163)
-- QTUM: MEXC 24s hajmi kam ($55,099)
-- S: MEXC 24s hajmi kam ($94,177)
-- SAFE: MEXC 24s hajmi kam ($402)
-- SAND: MEXC 24s hajmi kam ($58,248)
-- SEI: MEXC 24s hajmi kam ($101,672)
-- SKY: MEXC 24s hajmi kam ($63,516)
+- JELLYJELLY: MEXC 24s hajmi kam ($55,149)
+- JST: MEXC 24s hajmi kam ($57,225)
+- KAIA: MEXC 24s hajmi kam ($54,797)
+- KCS: MEXC 24s hajmi kam ($70,028)
+- LPT: MEXC 24s hajmi kam ($54,138)
+- MAGMA: MEXC 24s hajmi kam ($84,670)
+- MANA: MEXC 24s hajmi kam ($58,821)
+- MEGA: MEXC 24s hajmi kam ($65,916)
+- MET: MEXC 24s hajmi kam ($80,198)
+- MINA: MEXC 24s hajmi kam ($57,555)
+- MSOL: MEXC spot'da yo'q
+- NEO: MEXC 24s hajmi kam ($56,105)
+- NIGHT: MEXC 24s hajmi kam ($161,233)
+- PAXG: MEXC spot'da yo'q
+- PI: MEXC 24s hajmi kam ($180,957)
+- PLUME: MEXC 24s hajmi kam ($116,440)
+- QTUM: MEXC 24s hajmi kam ($55,002)
+- RED: MEXC 24s hajmi kam ($61,795)
+- S: MEXC 24s hajmi kam ($73,103)
+- SAFE: MEXC 24s hajmi kam ($2,141)
+- SEI: MEXC 24s hajmi kam ($90,017)
+- SHIB: resistance juda yaqin (0.00000446, RR 1:0.6)
+- SKY: MEXC 24s hajmi kam ($58,724)
+- SNX: MEXC 24s hajmi kam ($55,171)
 - STRCX: MEXC spot'da yo'q
-- STRK: MEXC 24s hajmi kam ($493,164)
-- STX: MEXC 24s hajmi kam ($72,620)
-- SUI: resistance juda yaqin (0.84280, RR 1:0.7)
-- TAO: resistance juda yaqin (222.9800, RR 1:0.7)
-- TRAC: MEXC 24s hajmi kam ($69,849)
-- TWT: MEXC 24s hajmi kam ($53,353)
-- VELO: MEXC 24s hajmi kam ($39,441)
-- VIRTUAL: MEXC 24s hajmi kam ($103,178)
-- WEMIX: MEXC 24s hajmi kam ($68,237)
-- WIF: MEXC 24s hajmi kam ($333,753)
-- XEC: MEXC 24s hajmi kam ($81,621)
-- XPL: MEXC 24s hajmi kam ($435,296)
-- YFI: MEXC 24s hajmi kam ($52,933)
-- ZEC: resistance juda yaqin (1 220.00, RR 1:0.7)
-- ZETA: MEXC 24s hajmi kam ($56,521)
-- ZK: MEXC 24s hajmi kam ($70,832)
-- ZRX: MEXC 24s hajmi kam ($54,938)
+- STRK: MEXC 24s hajmi kam ($330,943)
+- STX: MEXC 24s hajmi kam ($69,718)
+- SYRUP: MEXC 24s hajmi kam ($60,973)
+- TAO: MEXC 24s hajmi kam ($385,834)
+- TON: MEXC spot'da yo'q
+- TRAC: MEXC 24s hajmi kam ($63,161)
+- TSLAX: MEXC 24s hajmi kam ($61,792)
+- ULTIMA: MEXC 24s hajmi kam ($174,600)
+- VIRTUAL: MEXC 24s hajmi kam ($90,671)
+- VTHO: MEXC 24s hajmi kam ($58,262)
+- VVV: MEXC 24s hajmi kam ($98,920)
+- WAL: MEXC 24s hajmi kam ($53,480)
+- XDC: MEXC 24s hajmi kam ($94,950)
+- XMR: baho 0/5
+- XTZ: MEXC 24s hajmi kam ($56,079)
+- ZEC: resistance juda yaqin (1 160.70, RR 1:0.8)
+- ZETA: MEXC 24s hajmi kam ($56,442)
+- ZK: MEXC 24s hajmi kam ($66,338)
 
 ## Eng ko'p kelgan kuchli turlar
-- SUPPORT_RESISTANCE_APPROACHING: 548
-- NEW_LOCAL_HIGH_LOW_5_PERIODS: 28
-- PULLBACK_UP_DOWN_TREND: 17
-- PRICE_EMA_9_12: 16
-- MA_RIBBON: 14
-- NEW_LOCAL_HIGH_LOW_10_PERIODS: 13
-- NEW_LOCAL_HIGH_LOW_15_PERIODS: 11
-- PRICE_SMA_5_10: 10
-- PULLBACK_UP_DOWN_TREND_1W: 10
-- TRADING_RANGE_V2: 7
+- SUPPORT_RESISTANCE_APPROACHING: 701
+- NEW_LOCAL_HIGH_LOW_5_PERIODS: 71
+- NEW_LOCAL_HIGH_LOW_10_PERIODS: 44
+- PULLBACK_UP_DOWN_TREND: 30
+- NEW_LOCAL_HIGH_LOW_15_PERIODS: 24
+- TRADING_RANGE_V2: 15
+- TRADING_RANGE: 9
+- PRICE_EMA_12_26: 8
+- NEW_LOCAL_HIGH_LOW_20_PERIODS: 7
+- EMERGING_PATTERNS: 7
 
 ## Eng ko'p tashlangan zaif turlar
-- STOCH_RSI: 364
-- STOCH: 326
-- WILLIAMS: 315
-- RSI_9: 294
-- SUPPORT_RESISTANCE_APPROACHING_OVERSOLD: 180
-- RSI_14: 132
-- EARLY_MOMENTUM_MACD_HISTOGRAM_INFLECTION: 88
-- UNUSUAL_VOLUME_GAINERS_DECLINERS: 61
-- BULL_POWER: 53
-- DOJI: 34
+- STOCH_RSI: 626
+- STOCH: 611
+- WILLIAMS: 595
+- RSI_9: 486
+- SUPPORT_RESISTANCE_APPROACHING_OVERSOLD: 346
+- RSI_14: 294
+- UNUSUAL_VOLUME_GAINERS_DECLINERS: 227
+- EARLY_MOMENTUM_MACD_HISTOGRAM_INFLECTION: 195
+- VERY_OVERSOLD_OVERBOUGHT: 108
+- BULL_POWER: 98
