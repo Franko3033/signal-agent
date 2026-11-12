@@ -1,293 +1,109 @@
-# Oxirgi sessiya: 🇺🇸 New York sessiyasi (ochilish 18:00)
-Vaqt: 11.11.2026 19:25 (Toshkent)
+# Oxirgi sessiya: 🇬🇧 London sessiyasi (ochilish 13:00)
+Vaqt: 12.11.2026 14:25 (Toshkent)
 
 ## Voronka
-- 1. altFINS signallari: 3764
-- 2. kuchli + yirik signallar: 604
-- x zaif signal turi: 3160
-- 3. kuzatuvga olingan coinlar: 0
+- 1. altFINS signallari: 4664
+- 2. kuchli + yirik signallar: 226
+- x kapitalizatsiya kichik: 658
+- x zaif signal turi: 3780
+- 3. kuzatuvga olingan coinlar: 2
 - 4. yuborilgan signal: 0 
 
 ## Coin bo'yicha sabablar
-- MEXC spot'da yo'q: 253
+- MEXC hajmi kam: 49
+- MEXC spot'da yo'q: 10
+- baho past: 3
 - resistance juda yaqin: 1
+- tasdiq bor, lekin resistance juda yaqin: 1
+- 2 soatda 5M tasdiq yo'q: 1
 
 ## Coinlar
-- CS_A: MEXC spot'da yo'q
-- CS_AAPL: MEXC spot'da yo'q
-- CS_ABT: MEXC spot'da yo'q
-- CS_ACN: MEXC spot'da yo'q
-- CS_ADI: MEXC spot'da yo'q
-- CS_ADM: MEXC spot'da yo'q
-- CS_ADP: MEXC spot'da yo'q
-- CS_AEE: MEXC spot'da yo'q
-- CS_AEM: MEXC spot'da yo'q
-- CS_AIG: MEXC spot'da yo'q
-- CS_AJG: MEXC spot'da yo'q
-- CS_ALL: MEXC spot'da yo'q
-- CS_ALNY: MEXC spot'da yo'q
-- CS_AMD: MEXC spot'da yo'q
-- CS_AME: MEXC spot'da yo'q
-- CS_AMP: MEXC spot'da yo'q
-- CS_AMT: MEXC spot'da yo'q
-- CS_AMZN: MEXC spot'da yo'q
-- CS_ANET: MEXC spot'da yo'q
-- CS_AON: MEXC spot'da yo'q
-- CS_APD: MEXC spot'da yo'q
-- CS_APH: MEXC spot'da yo'q
-- CS_APP: MEXC spot'da yo'q
-- CS_APTV: MEXC spot'da yo'q
-- CS_ARGX: MEXC spot'da yo'q
-- CS_ATO: MEXC spot'da yo'q
-- CS_AU: MEXC spot'da yo'q
-- CS_AXON: MEXC spot'da yo'q
-- CS_AXP: MEXC spot'da yo'q
-- CS_AZO: MEXC spot'da yo'q
-- CS_BA: MEXC spot'da yo'q
-- CS_BAC: MEXC spot'da yo'q
-- CS_BAX: MEXC spot'da yo'q
-- CS_BBD: MEXC spot'da yo'q
-- CS_BBVA: MEXC spot'da yo'q
-- CS_BHP: MEXC spot'da yo'q
-- CS_BIDU: MEXC spot'da yo'q
-- CS_BKNG: MEXC spot'da yo'q
-- CS_BKR: MEXC spot'da yo'q
-- CS_BMO: MEXC spot'da yo'q
-- CS_BMY: MEXC spot'da yo'q
-- CS_BN: MEXC spot'da yo'q
-- CS_BNS: MEXC spot'da yo'q
-- CS_BNY: MEXC spot'da yo'q
-- CS_BP: MEXC spot'da yo'q
-- CS_BRO: MEXC spot'da yo'q
-- CS_BSX: MEXC spot'da yo'q
-- CS_BTI: MEXC spot'da yo'q
-- CS_BUD: MEXC spot'da yo'q
-- CS_BX: MEXC spot'da yo'q
-- CS_C: MEXC spot'da yo'q
-- CS_CB: MEXC spot'da yo'q
-- CS_CBRE: MEXC spot'da yo'q
-- CS_CCL: MEXC spot'da yo'q
-- CS_CDNS: MEXC spot'da yo'q
-- CS_CE: MEXC spot'da yo'q
-- CS_CEG: MEXC spot'da yo'q
-- CS_CHRW: MEXC spot'da yo'q
-- CS_CI: MEXC spot'da yo'q
-- CS_CLX: MEXC spot'da yo'q
-- CS_CM: MEXC spot'da yo'q
-- CS_CME: MEXC spot'da yo'q
-- CS_CMI: MEXC spot'da yo'q
-- CS_CNC: MEXC spot'da yo'q
-- CS_CNQ: MEXC spot'da yo'q
-- CS_COF: MEXC spot'da yo'q
-- CS_COIN: MEXC spot'da yo'q
-- CS_COR: MEXC spot'da yo'q
-- CS_CPNG: MEXC spot'da yo'q
-- CS_CRH: MEXC spot'da yo'q
-- CS_CRWD: MEXC spot'da yo'q
-- CS_CTVA: MEXC spot'da yo'q
-- CS_CVS: MEXC spot'da yo'q
-- CS_CVX: MEXC spot'da yo'q
-- CS_DASH: MEXC spot'da yo'q
-- CS_DB: MEXC spot'da yo'q
-- CS_DD: MEXC spot'da yo'q
-- CS_DDOG: MEXC spot'da yo'q
-- CS_DE: MEXC spot'da yo'q
-- CS_DG: MEXC spot'da yo'q
-- CS_DHR: MEXC spot'da yo'q
-- CS_DLTR: MEXC spot'da yo'q
-- CS_DOV: MEXC spot'da yo'q
-- CS_DTE: MEXC spot'da yo'q
-- CS_DVN: MEXC spot'da yo'q
-- CS_DXCM: MEXC spot'da yo'q
-- CS_E: MEXC spot'da yo'q
-- CS_EBAY: MEXC spot'da yo'q
-- CS_ECL: MEXC spot'da yo'q
-- CS_ED: MEXC spot'da yo'q
-- CS_EIX: MEXC spot'da yo'q
-- CS_HAL: MEXC spot'da yo'q
-- CS_HBAN: MEXC spot'da yo'q
-- CS_HDB: MEXC spot'da yo'q
-- CS_HEI: MEXC spot'da yo'q
-- CS_HIG: MEXC spot'da yo'q
-- CS_HLN: MEXC spot'da yo'q
-- CS_HPE: MEXC spot'da yo'q
-- CS_HWM: MEXC spot'da yo'q
-- CS_IBM: MEXC spot'da yo'q
-- CS_IFF: MEXC spot'da yo'q
-- CS_ILMN: MEXC spot'da yo'q
-- CS_IMO: MEXC spot'da yo'q
-- CS_INFY: MEXC spot'da yo'q
-- CS_ING: MEXC spot'da yo'q
-- CS_IQV: MEXC spot'da yo'q
-- CS_IR: MEXC spot'da yo'q
-- CS_ISRG: MEXC spot'da yo'q
-- CS_ITUB: MEXC spot'da yo'q
-- CS_ITW: MEXC spot'da yo'q
-- CS_JBS: MEXC spot'da yo'q
-- CS_JCI: MEXC spot'da yo'q
-- CS_JNJ: MEXC spot'da yo'q
-- CS_JPM: MEXC spot'da yo'q
-- CS_KB: MEXC spot'da yo'q
-- CS_KHC: MEXC spot'da yo'q
-- CS_KKR: MEXC spot'da yo'q
-- CS_KMI: MEXC spot'da yo'q
-- CS_KR: MEXC spot'da yo'q
-- CS_LHX: MEXC spot'da yo'q
-- CS_LMT: MEXC spot'da yo'q
-- CS_LNG: MEXC spot'da yo'q
-- CS_LOW: MEXC spot'da yo'q
-- CS_LYG: MEXC spot'da yo'q
-- CS_LYV: MEXC spot'da yo'q
-- CS_MA: MEXC spot'da yo'q
-- CS_MAR: MEXC spot'da yo'q
-- CS_MCD: MEXC spot'da yo'q
-- CS_MELI: MEXC spot'da yo'q
-- CS_MET: MEXC spot'da yo'q
-- CS_META: MEXC spot'da yo'q
-- CS_MFC: MEXC spot'da yo'q
-- CS_MLM: MEXC spot'da yo'q
-- CS_MMM: MEXC spot'da yo'q
-- CS_MNST: MEXC spot'da yo'q
-- CS_MO: MEXC spot'da yo'q
-- CS_MPC: MEXC spot'da yo'q
-- CS_MPLX: MEXC spot'da yo'q
-- CS_MPWR: MEXC spot'da yo'q
-- CS_MRK: MEXC spot'da yo'q
-- CS_MRNA: MEXC spot'da yo'q
-- CS_MRSH: MEXC spot'da yo'q
-- CS_MS: MEXC spot'da yo'q
-- CS_MSCI: MEXC spot'da yo'q
-- CS_MSFT: MEXC spot'da yo'q
-- CS_MT: MEXC spot'da yo'q
-- CS_MTB: MEXC spot'da yo'q
-- CS_NEM: MEXC spot'da yo'q
-- CS_NET: MEXC spot'da yo'q
-- CS_NFLX: MEXC spot'da yo'q
-- CS_NGG: MEXC spot'da yo'q
-- CS_NKE: MEXC spot'da yo'q
-- CS_NOC: MEXC spot'da yo'q
-- CS_NTES: MEXC spot'da yo'q
-- CS_NTRA: MEXC spot'da yo'q
-- CS_NUE: MEXC spot'da yo'q
-- CS_NVDA: MEXC spot'da yo'q
-- CS_NWG: MEXC spot'da yo'q
-- CS_NXPI: MEXC spot'da yo'q
-- CS_ODFL: MEXC spot'da yo'q
-- CS_OKE: MEXC spot'da yo'q
-- CS_OKTA: MEXC spot'da yo'q
-- CS_ON: MEXC spot'da yo'q
-- CS_OXY: MEXC spot'da yo'q
-- CS_PANW: MEXC spot'da yo'q
-- CS_PAYX: MEXC spot'da yo'q
-- CS_PBR: MEXC spot'da yo'q
-- CS_PCAR: MEXC spot'da yo'q
-- CS_PCG: MEXC spot'da yo'q
-- CS_PDD: MEXC spot'da yo'q
-- CS_PEG: MEXC spot'da yo'q
-- CS_PFE: MEXC spot'da yo'q
-- CS_PGR: MEXC spot'da yo'q
-- CS_PH: MEXC spot'da yo'q
-- CS_PLTR: MEXC spot'da yo'q
-- CS_PM: MEXC spot'da yo'q
-- CS_PNC: MEXC spot'da yo'q
-- CS_PSX: MEXC spot'da yo'q
-- CS_PUK: MEXC spot'da yo'q
-- CS_Q: MEXC spot'da yo'q
-- CS_RACE: MEXC spot'da yo'q
-- CS_RBLX: MEXC spot'da yo'q
-- CS_RCL: MEXC spot'da yo'q
-- CS_REGN: MEXC spot'da yo'q
-- CS_RELX: MEXC spot'da yo'q
-- CS_RIO: MEXC spot'da yo'q
-- CS_RKLB: MEXC spot'da yo'q
-- CS_ROP: MEXC spot'da yo'q
-- CS_ROST: MEXC spot'da yo'q
-- CS_RTX: MEXC spot'da yo'q
-- CS_RVMD: MEXC spot'da yo'q
-- CS_RY: MEXC spot'da yo'q
-- CS_RYAAY: MEXC spot'da yo'q
-- CS_SBAC: MEXC spot'da yo'q
-- CS_SCCO: MEXC spot'da yo'q
-- CS_SCHW: MEXC spot'da yo'q
-- CS_SHEL: MEXC spot'da yo'q
-- CS_SHOP: MEXC spot'da yo'q
-- CS_SNPS: MEXC spot'da yo'q
-- CS_SPCX: MEXC spot'da yo'q
-- CS_SPGI: MEXC spot'da yo'q
-- CS_SRE: MEXC spot'da yo'q
-- CS_STLD: MEXC spot'da yo'q
-- CS_SU: MEXC spot'da yo'q
-- CS_SYK: MEXC spot'da yo'q
-- CS_TD: MEXC spot'da yo'q
-- CS_TDY: MEXC spot'da yo'q
-- CS_TEAM: MEXC spot'da yo'q
-- CS_TEL: MEXC spot'da yo'q
-- CS_TEVA: MEXC spot'da yo'q
-- CS_TFC: MEXC spot'da yo'q
-- CS_TGT: MEXC spot'da yo'q
-- CS_TM: MEXC spot'da yo'q
-- CS_TMO: MEXC spot'da yo'q
-- CS_TMUS: MEXC spot'da yo'q
-- CS_TRGP: MEXC spot'da yo'q
-- CS_TRI: MEXC spot'da yo'q
-- CS_TRP: MEXC spot'da yo'q
-- CS_TRV: MEXC spot'da yo'q
-- CS_TSLA: MEXC spot'da yo'q
-- CS_TT: MEXC spot'da yo'q
-- CS_TTE: MEXC spot'da yo'q
-- CS_TTWO: MEXC spot'da yo'q
-- CS_TXN: MEXC spot'da yo'q
-- CS_UAL: MEXC spot'da yo'q
-- CS_UBS: MEXC spot'da yo'q
-- CS_UI: MEXC spot'da yo'q
-- CS_UL: MEXC spot'da yo'q
-- CS_UNH: MEXC spot'da yo'q
-- CS_UPS: MEXC spot'da yo'q
-- CS_URI: MEXC spot'da yo'q
-- CS_USB: MEXC spot'da yo'q
-- CS_VALE: MEXC spot'da yo'q
-- CS_VEEV: MEXC spot'da yo'q
-- CS_VIK: MEXC spot'da yo'q
-- CS_VLO: MEXC spot'da yo'q
-- CS_VMC: MEXC spot'da yo'q
-- CS_VRSK: MEXC spot'da yo'q
-- CS_VRSN: MEXC spot'da yo'q
-- CS_VRTX: MEXC spot'da yo'q
-- CS_VZ: MEXC spot'da yo'q
-- CS_WAB: MEXC spot'da yo'q
-- CS_WAT: MEXC spot'da yo'q
-- CS_WDAY: MEXC spot'da yo'q
-- CS_WFC: MEXC spot'da yo'q
-- CS_WMB: MEXC spot'da yo'q
-- CS_WST: MEXC spot'da yo'q
-- CS_WTW: MEXC spot'da yo'q
-- CS_XOM: MEXC spot'da yo'q
-- CS_YUM: MEXC spot'da yo'q
-- CS_ZM: MEXC spot'da yo'q
-- CS_ZS: MEXC spot'da yo'q
-- CS_ZTS: MEXC spot'da yo'q
-- ETHFI: resistance juda yaqin (0.63800, RR 1:0.3)
+- ABBVX: MEXC spot'da yo'q
+- AGT: resistance juda yaqin (0.07777, RR 1:0.3)
+- AIOZ: MEXC spot'da yo'q
+- ALE: MEXC 24s hajmi kam ($32,938)
+- AMP: MEXC 24s hajmi kam ($52,951)
+- ARIA: baho 1/5
+- ASTER: tasdiq bor, lekin resistance juda yaqin (0.66180, RR 1:0.3)
+- ATLA: MEXC 24s hajmi kam ($301,870)
+- BABY: MEXC 24s hajmi kam ($58,793)
+- BANANAS31: MEXC 24s hajmi kam ($60,140)
+- BDX: 2 soat ichida tasdiq bo'lmadi
+- CAP: MEXC 24s hajmi kam ($61,521)
+- CC: MEXC 24s hajmi kam ($136,387)
+- CFX: MEXC 24s hajmi kam ($58,507)
+- COMP: MEXC 24s hajmi kam ($56,434)
+- COW: MEXC 24s hajmi kam ($56,008)
+- CRO: MEXC 24s hajmi kam ($87,974)
+- CVX: MEXC 24s hajmi kam ($54,863)
+- CVXX: MEXC spot'da yo'q
+- DGB: MEXC spot'da yo'q
+- DYDX: MEXC 24s hajmi kam ($87,155)
+- EGLD: MEXC 24s hajmi kam ($60,869)
+- FF: MEXC 24s hajmi kam ($53,885)
+- FTT: MEXC 24s hajmi kam ($55,685)
+- GALA: MEXC 24s hajmi kam ($126,130)
+- GAS: MEXC spot'da yo'q
+- GEOD: MEXC 24s hajmi kam ($85,504)
+- GMX: MEXC 24s hajmi kam ($55,650)
+- GNO: MEXC 24s hajmi kam ($62,181)
+- H: MEXC 24s hajmi kam ($81,129)
+- HONX: MEXC spot'da yo'q
+- IO: MEXC 24s hajmi kam ($195,761)
+- IOTA: MEXC 24s hajmi kam ($56,649)
+- JASMY: MEXC 24s hajmi kam ($82,299)
+- KCS: MEXC 24s hajmi kam ($56,099)
+- KITE: MEXC 24s hajmi kam ($71,591)
+- KOX: MEXC spot'da yo'q
+- KSM: MEXC 24s hajmi kam ($55,436)
+- M: MEXC 24s hajmi kam ($59,946)
+- NVDAX: MEXC 24s hajmi kam ($73,223)
+- O: MEXC 24s hajmi kam ($61,243)
+- PENDLE: MEXC 24s hajmi kam ($223,758)
+- PEPE: baho 1/5
+- PIEVERSE: MEXC 24s hajmi kam ($82,484)
+- QQQX: MEXC spot'da yo'q
+- QTUM: MEXC 24s hajmi kam ($55,103)
+- RED: MEXC 24s hajmi kam ($59,470)
+- RENDER: MEXC 24s hajmi kam ($99,517)
+- SAND: MEXC 24s hajmi kam ($84,587)
+- SKY: MEXC 24s hajmi kam ($66,158)
+- STOC: MEXC 24s hajmi kam ($18,989)
+- STRCX: MEXC spot'da yo'q
+- SYRUP: MEXC 24s hajmi kam ($60,742)
+- THETA: MEXC spot'da yo'q
+- TRAC: MEXC 24s hajmi kam ($54,991)
+- TRX: baho 1/5
+- VELO: MEXC 24s hajmi kam ($22,832)
+- VSN: MEXC 24s hajmi kam ($55,450)
+- WIN: MEXC 24s hajmi kam ($54,779)
+- XDC: MEXC 24s hajmi kam ($116,549)
+- XLM: MEXC 24s hajmi kam ($314,858)
+- XTZ: MEXC 24s hajmi kam ($57,060)
+- ZAMA: MEXC 24s hajmi kam ($58,782)
+- ZEN: MEXC 24s hajmi kam ($72,449)
+- ZRX: MEXC 24s hajmi kam ($56,797)
 
 ## Eng ko'p kelgan kuchli turlar
-- SUPPORT_RESISTANCE_APPROACHING: 134
-- PRICE_EMA_12_26: 68
-- TRADING_RANGE: 52
-- PRICE_EMA_100_200: 39
-- PULLBACK_UP_DOWN_TREND_1W: 33
-- SUPPORT_RESISTANCE_BREAKOUT: 32
-- PRICE_SMA_5_10: 29
-- PRICE_EMA_50_100: 28
-- PRICE_EMA_9_12: 25
-- PRICE_SMA_10_20: 25
+- SUPPORT_RESISTANCE_APPROACHING: 635
+- NEW_LOCAL_HIGH_LOW_5_PERIODS: 79
+- NEW_LOCAL_HIGH_LOW_10_PERIODS: 28
+- PULLBACK_UP_DOWN_TREND: 25
+- NEW_LOCAL_HIGH_LOW_15_PERIODS: 25
+- PRICE_EMA_12_26: 22
+- SUPPORT_RESISTANCE_BREAKOUT: 15
+- PULLBACK_UP_DOWN_TREND_1W: 15
+- NEW_LOCAL_HIGH_LOW_20_PERIODS: 11
+- TRADING_RANGE: 10
 
 ## Eng ko'p tashlangan zaif turlar
-- TOP_GAINERS: 523
-- BULL_POWER: 397
-- BEAR_POWER: 251
-- SHORT_TERM_TREND_UPGRADE_DOWNGRADE: 233
-- WITHIN_5_PERCENT_ATH: 211
-- WITHIN_5_PERCENT_ATH_NOT_OVERBOUGHT: 207
-- STOCH_RSI: 151
-- UP_DOWN_TREND: 145
-- TR_ATR_1X: 144
-- EARLY_MOMENTUM_MACD_HISTOGRAM_INFLECTION: 133
+- WILLIAMS: 504
+- STOCH_RSI: 494
+- STOCH: 492
+- SUPPORT_RESISTANCE_APPROACHING_OVERSOLD: 459
+- RSI_9: 359
+- VERY_OVERSOLD_OVERBOUGHT: 305
+- EARLY_MOMENTUM_MACD_HISTOGRAM_INFLECTION: 301
+- RSI_14: 246
+- BULL_POWER: 168
+- UNUSUAL_VOLUME_GAINERS_DECLINERS: 160
